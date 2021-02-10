@@ -21,7 +21,7 @@ export class PortfolioComponent implements OnInit {
       // to simulate loading time (?)
       setTimeout(() => {
         this.loading = false;
-      }, 1500);
+      }, 500);
     });
   }
 

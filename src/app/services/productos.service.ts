@@ -2,11 +2,15 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { InfoProducto } from '../interfaces/info-producto.interface';
+import { DetalleProducto } from '../interfaces/detalle-producto.interface';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ProductosService {
+  getDetallesProducto(id: string): Observable<DetalleProducto> {
+    return this.httpClient.get<DetalleProducto>(`https://mic3l-portfolio-default-rtdb.firebaseio.com/productos/${id}.json`);
+  }
 
   constructor(private httpClient: HttpClient) { }
 
