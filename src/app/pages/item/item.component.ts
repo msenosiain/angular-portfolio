@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Params } from '@angular/router';
 import { switchMap } from 'rxjs/operators';
 import { DetalleProducto } from 'src/app/interfaces/detalle-producto.interface';
-import { ProductosService } from '../../services/productos.service';
+import { ProductosService } from 'src/app/services/productos.service';
 
 @Component({
   selector: 'app-item',
